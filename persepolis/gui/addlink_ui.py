@@ -400,7 +400,7 @@ class AddLinkWindow_Ui(QWidget):
         self.setLayout(window_verticalLayout)
 
         # labels ->
-        self.setWindowTitle(QCoreApplication.translate("addlink_ui_tr", "Enter Your Link"))
+        self.setWindowTitle(QCoreApplication.translate("addlink_ui_tr", "Enter Your Link_Float"))
 
         self.link_label.setText(QCoreApplication.translate("addlink_ui_tr", "Download Link: "))
 

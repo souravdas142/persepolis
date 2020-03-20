@@ -59,7 +59,7 @@ class AfterDownloadWindow(AfterDownloadWindow_Ui):
 
         # file_name
 
-        window_title = str(self.dict['file_name'])
+        window_title = str(self.dict['file_name']) + str(" Downloaded_Float")
         file_name = QCoreApplication.translate("after_download_src_ui_tr", "<b>File name</b>: ") + \
             window_title
 

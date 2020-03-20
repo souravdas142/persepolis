@@ -37,7 +37,7 @@ class KeyCapturingWindow_Ui(QWidget):
             QCoreApplication.installTranslator(self.translator)
 
         self.setWindowIcon(QIcon.fromTheme('persepolis', QIcon(':/persepolis.svg')))
-        self.setWindowTitle(QCoreApplication.translate("setting_ui_tr", 'Preferences'))
+        self.setWindowTitle(QCoreApplication.translate("setting_ui_tr", 'Preferences_Float'))
 
         # set ui direction
         ui_direction = self.persepolis_setting.value('ui_direction')
@@ -94,7 +94,7 @@ class Setting_Ui(QWidget):
             QCoreApplication.installTranslator(self.translator)
 
         self.setWindowIcon(QIcon.fromTheme('persepolis', QIcon(':/persepolis.svg')))
-        self.setWindowTitle(QCoreApplication.translate("setting_ui_tr", 'Preferences'))
+        self.setWindowTitle(QCoreApplication.translate("setting_ui_tr", 'Preferences_Float'))
 
         # set ui direction
         ui_direction = self.persepolis_setting.value('ui_direction')
@@ -546,7 +546,7 @@ class Setting_Ui(QWidget):
         self.setting_tabWidget.setCurrentIndex(3)
 
         # labels and translations
-        self.setWindowTitle(QCoreApplication.translate("setting_ui_tr", "Preferences"))
+        self.setWindowTitle(QCoreApplication.translate("setting_ui_tr", "Preferences_Float"))
 
         self.tries_label.setToolTip(
             QCoreApplication.translate("setting_ui_tr", "<html><head/><body><p>Set number of tries if download failed.</p></body></html>"))

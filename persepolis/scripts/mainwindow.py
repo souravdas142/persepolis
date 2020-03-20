@@ -1968,7 +1968,7 @@ class MainWindow(MainWindow_Ui):
                 file_name = str(dict['file_name'])
 
                 if file_name != "***":
-                    windows_title = '(' + str(value) + ')' + str(file_name)
+                    windows_title = '(' + str(value) + ')' + str(file_name) + str(" Downloading..._Float")
                     progress_window.setWindowTitle(windows_title)
                 try:
                     value = int(value[:-1])

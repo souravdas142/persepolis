@@ -165,7 +165,7 @@ class VideoFinderAddLink(AddLinkWindow):
 
     def __init__(self, parent, receiver_slot, settings, video_dict={}):
         super().__init__(parent, receiver_slot, settings, video_dict)
-        self.setWindowTitle(QCoreApplication.translate("ytaddlink_src_ui_tr", 'Video Finder'))
+        self.setWindowTitle(QCoreApplication.translate("ytaddlink_src_ui_tr", 'Video Finder_Float'))
         self.size_label.hide()
 
         # empty lists for no_audio and no_video and video_audio files

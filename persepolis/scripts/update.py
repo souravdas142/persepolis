@@ -46,7 +46,7 @@ class checkupdate(QWidget):
         if self.translator.load(':/translations/locales/ui_' + locale, 'ts'):
             QCoreApplication.installTranslator(self.translator)
 
-        self.setWindowTitle(QCoreApplication.translate("update_src_ui_tr", 'Checking for newer version'))
+        self.setWindowTitle(QCoreApplication.translate("update_src_ui_tr", 'Checking for newer version_Float'))
 
         # installed version
         self.client_version = '3.20'

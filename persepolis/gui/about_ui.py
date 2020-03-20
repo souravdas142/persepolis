@@ -184,7 +184,7 @@ class AboutWindow_Ui(QWidget):
 
         verticalLayout.addLayout(button_horizontalLayout)
 
-        self.setWindowTitle(QCoreApplication.translate("about_ui_tr", "About Persepolis"))
+        self.setWindowTitle(QCoreApplication.translate("about_ui_tr", "About Persepolis_Float"))
 
         # about_tab
         self.title_label.setText(QCoreApplication.translate("about_ui_tr", "Persepolis Download Manager"))

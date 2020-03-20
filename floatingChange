@@ -1,0 +1,122 @@
+diff --git a/persepolis/gui/about_ui.py b/persepolis/gui/about_ui.py
+index 894bd24..db688c6 100644
+--- a/persepolis/gui/about_ui.py
++++ b/persepolis/gui/about_ui.py
+@@ -184,7 +184,7 @@ class AboutWindow_Ui(QWidget):
+ 
+         verticalLayout.addLayout(button_horizontalLayout)
+ 
+-        self.setWindowTitle(QCoreApplication.translate("about_ui_tr", "About Persepolis"))
++        self.setWindowTitle(QCoreApplication.translate("about_ui_tr", "About Persepolis_Float"))
+ 
+         # about_tab
+         self.title_label.setText(QCoreApplication.translate("about_ui_tr", "Persepolis Download Manager"))
+diff --git a/persepolis/gui/addlink_ui.py b/persepolis/gui/addlink_ui.py
+index f1df265..d2800a8 100644
+--- a/persepolis/gui/addlink_ui.py
++++ b/persepolis/gui/addlink_ui.py
+@@ -400,7 +400,7 @@ class AddLinkWindow_Ui(QWidget):
+         self.setLayout(window_verticalLayout)
+ 
+         # labels ->
+-        self.setWindowTitle(QCoreApplication.translate("addlink_ui_tr", "Enter Your Link"))
++        self.setWindowTitle(QCoreApplication.translate("addlink_ui_tr", "Enter Your Link_Float"))
+ 
+         self.link_label.setText(QCoreApplication.translate("addlink_ui_tr", "Download Link: "))
+ 
+diff --git a/persepolis/gui/log_window_ui.py b/persepolis/gui/log_window_ui.py
+index 25294cf..a24cfd4 100644
+--- a/persepolis/gui/log_window_ui.py
++++ b/persepolis/gui/log_window_ui.py
+@@ -88,7 +88,7 @@ class LogWindow_Ui(QWidget):
+ 
+ # set labels
+ 
+-        self.setWindowTitle(QCoreApplication.translate("log_window_ui_tr", 'Persepolis Log'))
++        self.setWindowTitle(QCoreApplication.translate("log_window_ui_tr", 'Persepolis Log_Float'))
+         self.close_pushButton.setText(QCoreApplication.translate("log_window_ui_tr", 'close'))
+         self.copy_log_pushButton.setText(QCoreApplication.translate("log_window_ui_tr", 'Copy selected to clipboard'))
+         self.report_pushButton.setText(QCoreApplication.translate("log_window_ui_tr", "Report Issue"))
+diff --git a/persepolis/gui/setting_ui.py b/persepolis/gui/setting_ui.py
+index c122c42..5c92da8 100644
+--- a/persepolis/gui/setting_ui.py
++++ b/persepolis/gui/setting_ui.py
+@@ -37,7 +37,7 @@ class KeyCapturingWindow_Ui(QWidget):
+             QCoreApplication.installTranslator(self.translator)
+ 
+         self.setWindowIcon(QIcon.fromTheme('persepolis', QIcon(':/persepolis.svg')))
+-        self.setWindowTitle(QCoreApplication.translate("setting_ui_tr", 'Preferences'))
++        self.setWindowTitle(QCoreApplication.translate("setting_ui_tr", 'Preferences_Float'))
+ 
+         # set ui direction
+         ui_direction = self.persepolis_setting.value('ui_direction')
+@@ -94,7 +94,7 @@ class Setting_Ui(QWidget):
+             QCoreApplication.installTranslator(self.translator)
+ 
+         self.setWindowIcon(QIcon.fromTheme('persepolis', QIcon(':/persepolis.svg')))
+-        self.setWindowTitle(QCoreApplication.translate("setting_ui_tr", 'Preferences'))
++        self.setWindowTitle(QCoreApplication.translate("setting_ui_tr", 'Preferences_Float'))
+ 
+         # set ui direction
+         ui_direction = self.persepolis_setting.value('ui_direction')
+@@ -546,7 +546,7 @@ class Setting_Ui(QWidget):
+         self.setting_tabWidget.setCurrentIndex(3)
+ 
+         # labels and translations
+-        self.setWindowTitle(QCoreApplication.translate("setting_ui_tr", "Preferences"))
++        self.setWindowTitle(QCoreApplication.translate("setting_ui_tr", "Preferences_Float"))
+ 
+         self.tries_label.setToolTip(
+             QCoreApplication.translate("setting_ui_tr", "<html><head/><body><p>Set number of tries if download failed.</p></body></html>"))
+diff --git a/persepolis/scripts/after_download.py b/persepolis/scripts/after_download.py
+index 984ba99..3db9148 100644
+--- a/persepolis/scripts/after_download.py
++++ b/persepolis/scripts/after_download.py
+@@ -59,7 +59,7 @@ class AfterDownloadWindow(AfterDownloadWindow_Ui):
+ 
+         # file_name
+ 
+-        window_title = str(self.dict['file_name'])
++        window_title = str(self.dict['file_name']) + str(" Downloaded_Float")
+         file_name = QCoreApplication.translate("after_download_src_ui_tr", "<b>File name</b>: ") + \
+             window_title
+ 
+diff --git a/persepolis/scripts/mainwindow.py b/persepolis/scripts/mainwindow.py
+index 864ae5c..ca51e02 100644
+--- a/persepolis/scripts/mainwindow.py
++++ b/persepolis/scripts/mainwindow.py
+@@ -1968,7 +1968,7 @@ class MainWindow(MainWindow_Ui):
+                 file_name = str(dict['file_name'])
+ 
+                 if file_name != "***":
+-                    windows_title = '(' + str(value) + ')' + str(file_name)
++                    windows_title = '(' + str(value) + ')' + str(file_name) + str(" Downloading..._Float")
+                     progress_window.setWindowTitle(windows_title)
+                 try:
+                     value = int(value[:-1])
+diff --git a/persepolis/scripts/update.py b/persepolis/scripts/update.py
+index 0dae574..a14d2b6 100644
+--- a/persepolis/scripts/update.py
++++ b/persepolis/scripts/update.py
+@@ -46,7 +46,7 @@ class checkupdate(QWidget):
+         if self.translator.load(':/translations/locales/ui_' + locale, 'ts'):
+             QCoreApplication.installTranslator(self.translator)
+ 
+-        self.setWindowTitle(QCoreApplication.translate("update_src_ui_tr", 'Checking for newer version'))
++        self.setWindowTitle(QCoreApplication.translate("update_src_ui_tr", 'Checking for newer version_Float'))
+ 
+         # installed version
+         self.client_version = '3.20'
+diff --git a/persepolis/scripts/video_finder_addlink.py b/persepolis/scripts/video_finder_addlink.py
+index f5024ec..e0a741d 100644
+--- a/persepolis/scripts/video_finder_addlink.py
++++ b/persepolis/scripts/video_finder_addlink.py
+@@ -165,7 +165,7 @@ class VideoFinderAddLink(AddLinkWindow):
+ 
+     def __init__(self, parent, receiver_slot, settings, video_dict={}):
+         super().__init__(parent, receiver_slot, settings, video_dict)
+-        self.setWindowTitle(QCoreApplication.translate("ytaddlink_src_ui_tr", 'Video Finder'))
++        self.setWindowTitle(QCoreApplication.translate("ytaddlink_src_ui_tr", 'Video Finder_Float'))
+         self.size_label.hide()
+ 
+         # empty lists for no_audio and no_video and video_audio files
